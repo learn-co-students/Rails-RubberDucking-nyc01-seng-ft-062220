@@ -1,0 +1,18 @@
+<h1>Flatiron Student Show Page</h1>
+
+<h4>Name: <%= @student.name %></h4>
+<p>Mod: <%= @student.mod %></p>
+<br>
+
+<p><%= link_to "Edit Student", edit_student_path(@student) %></p>
+<p><%= link_to "Return to Student Index", students_path %></p>
+
+<h4>Duck List:</h4>
+<ul>
+    <% @student.ducks.each do |duck|%>
+        <li><%= link_to duck.name, duck_path(duck) %></li>
+    <% end%>
+</ul>
+    
+ <br>
+    <%=button_to "DELETE", student_path(@student), method: :delete  %>
