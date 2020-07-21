@@ -1,0 +1,10 @@
+<h1><%= @student.name %></h1><br>
+Current Mod: <%= @student.mod %><br><br>
+Has <%= pluralize(@student.ducks.count, "duck") %><br><br>
+
+<br><br><br><br><br><br><%= link_to "Edit Student", edit_student_path %>
+<!--<%= link_to "Delete Student", student_path(@student), data: {:confirm => "Are you sure?"}, :method => :delete %>-->
+<%= link_to "Assign a Duck", new_duck_path, :method => "get" %><br><br>
+<%= button_to "Student List", students_path, :method => "get" %>
+
+

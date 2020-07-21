@@ -1,0 +1,9 @@
+<h1><%= @duck.name %></h1><br>
+Description: <%= @duck.description %><br><br>
+
+Belongs to Student: <%= link_to @duck.student.name, student_path(@duck.student) %><br><br>
+
+<br><br><br><br><br><br><%= link_to "Edit Duck", edit_duck_path %>
+<!--<%= link_to "Delete Duck", duck_path(@duck), data: {:confirm => "Are you sure?"}, :method => :delete %><br><br>-->
+<%= button_to "Duck list", ducks_path, :method => "get"%>
+
