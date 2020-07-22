@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
   end 
 
   def new 
-    @mod=[1,2,3,4,5]
+   
   @student=Student.new
   end 
 
