@@ -1,0 +1,12 @@
+<h1> Student Show Page: </h1>
+
+<h2><%= @student.name %></h2>
+
+<%= "#{@student.name}'s Ducks: "%>
+
+<ul>
+<% @student_ducks.each do |duck| %>
+<li><%= duck.name %></li>
+</ul>
+
+<% end %>
