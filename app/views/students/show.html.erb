@@ -1,0 +1,7 @@
+<h1>Student Info</h1>
+
+<strong>Student Name:</strong> <%= @student.name%><br>
+<strong>Student Mod:</strong><%= @student.mod %><br>
+<% @student.ducks.each_with_index do |ducky,i| %>
+<li><%= "Ducky ##{i+1} -- " "#{ducky.name}" %></li>
+<% end %>
