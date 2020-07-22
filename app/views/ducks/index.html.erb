@@ -1,7 +1,11 @@
 <h1>These are some cool duckys:</h1>
 
+<p><%= link_to "Create Duck", new_duck_path, class: "button"%></p>
+<br><br>
 <ul>
   <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+    <li> <%= link_to duck.name, duck_path(duck) %> </li>
+    <p><%= link_to "Edit", edit_duck_path(duck), class: "button" %></p>
+    <p><%= button_to "Delete",  duck, :method => :delete, class: "button"%></p>
   <% end %>
 </ul>

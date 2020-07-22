@@ -1,0 +1,13 @@
+<ul>
+    <li> 
+        <%= @duck.name %> 
+    </li>
+
+    <li> 
+        <%= @duck.description %> 
+    </li> 
+</ul>
+
+<br>
+
+<%= link_to "Edit", edit_duck_path(@duck), class: "button" %>
