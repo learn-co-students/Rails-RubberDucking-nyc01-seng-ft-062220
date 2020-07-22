@@ -1,0 +1,6 @@
+<%= @student.name %><br>
+<%= @student.mod %><br>
+<%= @ducks.each do |duck|%>
+    <%= link_to duck.name, duck_path(duck) %>
+<% end %>
+<%= button_to "Delete Student", student_path(@student), method: :delete %>
