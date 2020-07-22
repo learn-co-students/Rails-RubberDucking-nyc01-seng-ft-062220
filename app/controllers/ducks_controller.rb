@@ -10,8 +10,14 @@ class DucksController < ApplicationController
   end
 
   def create
-    duck = Duck.create(duck_params)
-    redirect_to duck_path(duck)
+    @duck = Duck.create(duck_params)
+
+    if @duck.valid?
+      redirect_to duck_path(@duck)
+    else
+      flash[:my_errors] = @duck.errors.full_messages
+      redirect_to new_duck_path
+    end
   end
 
   def show

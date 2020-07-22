@@ -5,6 +5,6 @@ Duck.destroy_all
   Student.create(name: Faker::Name.name, mod: rand(1..5))
 end
 
-100.times do
+10000.times do
   Duck.create(name: Faker::Creature::Dog.meme_phrase, description: Faker::Creature::Dog.breed, student_id: Student.order("RANDOM()").first.id)
 end
