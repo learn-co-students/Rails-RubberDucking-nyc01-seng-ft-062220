@@ -11,7 +11,7 @@
 
     <p>
         <%= f.label :student %>
-        <%= f.collection_select :student_id, Student.all, :duck_id, :name %>
+        <%= f.collection_select :student_id, Student.all, :id, :name %>
     </p>
 
     <%= f.submit "Submit Duck", class: "button"%>

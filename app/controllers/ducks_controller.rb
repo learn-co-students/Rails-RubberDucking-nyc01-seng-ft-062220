@@ -18,7 +18,6 @@ class DucksController < ApplicationController
 
 
   def create
-    byebug
     @duck = Duck.new(duck_params)
     
     if @duck.save
@@ -45,7 +44,7 @@ class DucksController < ApplicationController
   private
 
   def duck_params
-    params.require(:duck).permit(:name, :description, :student)
+    params.require(:duck).permit(:name, :description, :student_id)
   end
 
   def find_duck
