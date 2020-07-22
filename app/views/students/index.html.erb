@@ -1,7 +1,23 @@
 <h1>These are some cool students:</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<ul>
-  <% @students.each do |student| %>
-    <li> <%= student.name %> </li>
-  <% end %>
-</ul>
+<% @students.each do |student| %>
+  <tr>
+    <td><%= student.name %></td>
+    <td><%= link_to 'Show', student %></td>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Student', new_student_path %>
+

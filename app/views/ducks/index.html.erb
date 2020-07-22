@@ -1,7 +1,25 @@
 <h1>These are some cool duckys:</h1>
 
-<ul>
-  <% @ducks.each do |duck| %>
-    <li> <%= duck.name %> </li>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th colspan="3"></th>
+</tr>
+</thead>
+
+<% @ducks.each do |duck| %>
+  <tr>
+  <td><%= duck.name %></td>
+  <td><%= link_to 'Show', duck %></td>
+  <td><%= link_to 'Edit', edit_duck_path(duck) %></td>
+  
+  </tr>
   <% end %>
-</ul>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'New Duck', new_duck_path %>
+  
+  
