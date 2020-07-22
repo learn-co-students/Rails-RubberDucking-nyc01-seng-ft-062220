@@ -1,0 +1,6 @@
+<h1>Student Page</h1>
+
+<h2> Name: <%= @student.name %> </h2>
+<p> Current Mod: <%= @student.mod %> </p>
+<p> Duck: <%= @student.ducks.name %> </p>
+<p><%= link_to 'Edit', edit_student_path(@student) %></p>
