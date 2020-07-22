@@ -1,0 +1,18 @@
+<h1> Student's Information
+
+    
+    <h3> <%= @student.name %><br></h3>
+    <p>Mod: <%= @student.mod %></p>
+    
+    
+    <p> List of Duckies: <p>
+    <% if @student.ducks.empty? %>
+    <h4><%= "#{@student.name} doesn't have any duckies yet" %></h4>
+    <% else %>
+    <ul>
+    <% @student.ducks.each do |duck| %>
+        <li><%= link_to duck.name, duck_path(duck) %></li>
+        <% end %>
+    <% end %>
+        </ul>
+ 
