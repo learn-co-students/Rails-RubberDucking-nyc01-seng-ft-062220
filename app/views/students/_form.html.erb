@@ -1,0 +1,14 @@
+<%= form_with model: @student do |f| %>
+    <p> 
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </p>
+
+    <p>
+        <%= f.label :mod %>
+        <%= f.number_field :mod %> 
+    </p>
+
+        <%= f.submit "Submit Student", class: "button" %>
+    
+<% end %>

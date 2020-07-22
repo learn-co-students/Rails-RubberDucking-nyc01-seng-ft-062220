@@ -1,0 +1,22 @@
+<ul>
+    <li>
+        <%= @student.name %> <br>
+    </li>
+
+     <li>
+        <%= @student.mod %>
+    </li>
+
+    <li> Student Duck(s):</li>
+        <% if @student.ducks %>
+            <% @student.ducks.each do |duck| %>
+              <p> --<%= link_to duck.name, duck_path(duck) %> </p>
+            <% end %>
+        <% end %>
+    
+
+</ul>
+
+<br>
+
+<%= link_to "Edit", edit_student_path(@student), class: "button" %> <br>

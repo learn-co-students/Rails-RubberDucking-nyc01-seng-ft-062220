@@ -1,7 +1,10 @@
 <h1>These are some cool students:</h1>
 
+<br><br>
 <ul>
   <% @students.each do |student| %>
-    <li> <%= student.name %> </li>
+    <li> <%= link_to student.name, student_path(student) %> </li>
+    <p><%= link_to "Edit", edit_student_path(student), class: "button" %></p>
+    <p><%= button_to "Delete",  student, :method => :delete, class: "button"%></p>
   <% end %>
 </ul>
