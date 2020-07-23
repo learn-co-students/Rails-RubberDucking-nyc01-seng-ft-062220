@@ -1,0 +1,12 @@
+<%= form_for @duck do |f| %>
+    <label>Duck name: </label>
+    <%= f.text_field :name %>
+    <br><br>
+    <label>Duck description: </label>
+    <%= f.text_field :description %>
+    <br><br>
+    <label>Students</label>
+    <%= f.collection_select :student_id, @students, :id, :name %>
+
+    <%= f.submit "Save Duck" %>
+    <% end %>
